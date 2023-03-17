@@ -1,6 +1,6 @@
-const Contact = require("../models/contact");
+const Contact = require("../../models/contact");
 
-const { HttpError } = require("../helpers");
+const { HttpError } = require("../../helpers");
 
 const del = async (req, res) => {
   const { contactId } = req.params;

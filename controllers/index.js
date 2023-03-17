@@ -1,11 +1,11 @@
 const { ctrlWrapper } = require("../helpers");
 
-const getAll = require("./getAll");
-const getById = require("./getById");
-const add = require("./add");
-const del = require("./del");
-const upd = require("./upd");
-const updStatusContact = require("./updStatusContact");
+const getAll = require("./contacts/getAll");
+const getById = require("./contacts/getById");
+const add = require("./contacts/add");
+const del = require("./contacts/del");
+const upd = require("./contacts/upd");
+const updStatusContact = require("./contacts/updStatusContact");
 
 module.exports = {
   getAll: ctrlWrapper(getAll),
