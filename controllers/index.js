@@ -11,6 +11,7 @@ const register = require("./users/register");
 const login = require("./users/login");
 const getCurrentUser = require("./users/getCurrentUser");
 const logout = require("./users/logout");
+const updSubscr = require("./users/updSubscr");
 
 module.exports = {
   getAll: ctrlWrapper(getAll),
@@ -23,4 +24,5 @@ module.exports = {
   login: ctrlWrapper(login),
   getCurrentUser: ctrlWrapper(getCurrentUser),
   logout: ctrlWrapper(logout),
+  updSubscr: ctrlWrapper(updSubscr),
 };
