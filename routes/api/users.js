@@ -11,11 +11,21 @@ const {
   logout,
   updSubscr,
   updAvatar,
+  verifyEmail,
+  reVerifyEmail,
 } = require("../../controllers");
 
 const router = express.Router();
 
 router.post("/register", validateBody(authSchemas.registerSchema), register);
+
+router.get("/verify/:verificationToken", verifyEmail);
+
+router.post(
+  "/verify",
+  validateBody(authSchemas.reVerifyEmailSchema),
+  reVerifyEmail
+);
 
 router.post("/login", validateBody(authSchemas.loginSchema), login);
 

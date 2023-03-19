@@ -14,6 +14,9 @@ const login = async (req, res) => {
   if (!findUser || !passwordCompare) {
     throw HttpError(401, "Email or password is wrong");
   }
+  if (!findUser.verify) {
+    throw HttpError(404, "User not found");
+  }
   const payload = {
     id: findUser._id,
   };
